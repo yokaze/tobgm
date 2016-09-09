@@ -17,7 +17,7 @@ title: ToBGM
 email:
 description: Tutorials on Bayesian Generative Models
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://example.com" # the base hostname & protocol for your site
+url: "http://tobgm.github.io" # the base hostname & protocol for your site
 twitter_username: chrofieyue
 github_username:  tobgm
 

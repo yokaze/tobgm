@@ -1,0 +1,76 @@
+---
+permalink: /ja/pdf.html
+layout: post
+title: "基本的な確率分布"
+---
+
+## 正規分布
+
+$$
+\mathcal{N} \left(x \middle| \mu, \lambda^{-1} \right) = \left(\frac{\lambda}{2 \pi}\right)^{1/2} \exp \left\{ -\frac{\lambda}{2} (x - \mu)^2 \right\}
+$$
+
+## 多次元正規分布
+
+$$
+\mathcal{N} \left(x \middle| \mu, \Lambda^{-1} \right) = \frac{\left|\Lambda\right|^{1/2}}{(2 \pi)^{D/2}} \exp \left\{ -\frac{1}{2}(x-\mu)^{\mathrm{T}}\Lambda(x-\mu) \right\}
+$$
+
+## ガンマ分布
+
+$$
+\mathcal{G} \left(x \middle| a, b \right) = \frac{1}{\Gamma(a)} b^a x^{a - 1} \exp(-bx)
+$$
+
+## 一般化逆ガウス分布
+
+$$
+\mathcal{G}^+ \left( x \middle| \gamma, \rho, \tau \right) = \frac{\rho^{\gamma/2}}{2\tau^{\gamma/2}} \frac{\exp \left\{ (\gamma - 1) \ln x - \rho x - \tau / x \right\} }{\mathcal{K}_\gamma \left\{ 2 (\rho \tau)^{1/2} \right\} }
+$$
+
+$$\mathcal{K}_\gamma$$ は第二種ベッセル関数である．
+
+## ベータ分布
+
+$$
+\mathcal{B}\left( x \middle| a, b \right) = \frac{\Gamma(a + b)}{\Gamma(a)\Gamma(b)} x^{a - 1} (1 - x)^{b - 1}
+$$
+
+## ディリクレ分布
+
+$$
+\mathcal{D}(\pi|\alpha) = \frac{\Gamma\left(\sum_{k=1}^K \alpha_k \right)}{\prod_{k=1}^K \Gamma(\alpha_k)}\prod_{k=1}^K\pi_k^{\alpha_k - 1}
+$$
+
+## ポアソン分布
+
+$$
+\mathcal{P} \left(n \middle| \lambda \right) = \frac{\lambda^n \exp(-\lambda)}{\Gamma(n + 1)}
+$$
+
+## カテゴリー分布
+
+$$
+\mathcal{C} \left( z \middle| \pi \right) = \prod_{k=1}^K \pi_k^{z_k}
+$$
+
+## 多項分布
+
+$$
+\mathcal{M}\left( n \middle| \pi, N \right) = \frac{\Gamma(N+1)}{\prod_{k=1}^K \Gamma(n_k+1)} \prod_{k=1}^K \pi_k^{n_k}
+$$
+
+## 隠れマルコフ分布\*
+この名称は一般的ではない．
+
+$$
+\mathcal{H} \left(Z \middle| \pi, A, E \right) = \frac{1}{\mathcal{Z}} \prod_{k=1}^K \pi_k^{z_{1k}} \prod_{n=1}^{N-1} \prod_{jk} A_{jk}^{z_{nj}z_{n+1,k}} \prod_{nk} e_{nk}^{z_{nk}}
+$$
+
+$$\mathcal{Z}$$ は正規化係数である．
+
+## 参考文献
+
+1. C. M. Bishop, *Pattern Recognition and Machine Learning*, Springer, 2006.
+2. A. T. Cemgil, *Bayesian Inference for Nonnegative Matrix Factorisation Models*, Computational Intelligence and Neuroscience, 2009.
+3. M. D. Hoffman et al, *Bayesian Nonparametric Matrix Factorization for Recorded Music*, in *Proc. ICML*, 439-446, 2010.
